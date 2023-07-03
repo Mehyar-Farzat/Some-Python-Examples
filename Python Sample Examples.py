@@ -80,6 +80,102 @@ radius = int(input('Enter a value of radius: '))
 area = radius * radius * 3.14159
 print('The area of the circle', radius ,'is', area)
 -------------------------------------------------
+# print the letters of the entered text
+# one under the other on Python?
+
+word = 'FREEDOM'
+for char in word:
+        print(char)
+--------------------------------------------------
+
+# let’s ask the user about their choice of cinema or theater.
+# You have to pay 10 dollars to watch movies and 5 dollars for theater.
+# We think that students get 50% discount.
+# If the student is discounted; If he is not a student,
+# let’s write a document that calculates the non-discounted
+# amount and prints it.
+
+selection = input(' Hello, press (1) for Cinema, (2) for Theater ')
+student = input('Are you student (Y/N) ')
+price = 0
+if selection == '1':
+        price = 10
+elif selection == '2':
+        price = 5
+
+if student == 'Y' or student == 'y':
+        price = price / 2
+
+print(f'The fee you have to pay is : {price}')
+----------------------------------------------------------
+
+# calculate the increased salary of the worker whose salary
+# and raise rate is entered
+
+newsalary = 0
+salary = int(input("enter new salary : "))
+rais = input("salary rais rate(%) : ")
+newsalary = int(salary)+(int(salary)*int(rais)/100)
+print("increased salary :",newsalary)
+----------------------------------------------------------
+
+# Print Monthly Calendar using calender module
+import calender
+yy = 2023
+mm = 8
+print(calender.month(yy,mm))
+
+August 2023
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+# Print Whole Year Calendar
+
+import calender
+print(calender.calender (2023))
+
+2023
+
+      January                   February                   March
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                   1             1  2  3  4  5             1  2  3  4  5
+ 2  3  4  5  6  7  8       6  7  8  9 10 11 12       6  7  8  9 10 11 12
+ 9 10 11 12 13 14 15      13 14 15 16 17 18 19      13 14 15 16 17 18 19
+16 17 18 19 20 21 22      20 21 22 23 24 25 26      20 21 22 23 24 25 26
+23 24 25 26 27 28 29      27 28                     27 28 29 30 31
+30 31
+
+       April                      May                       June
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                1  2       1  2  3  4  5  6  7                1  2  3  4
+ 3  4  5  6  7  8  9       8  9 10 11 12 13 14       5  6  7  8  9 10 11
+10 11 12 13 14 15 16      15 16 17 18 19 20 21      12 13 14 15 16 17 18
+17 18 19 20 21 22 23      22 23 24 25 26 27 28      19 20 21 22 23 24 25
+24 25 26 27 28 29 30      29 30 31                  26 27 28 29 30
+
+        July                     August                  September
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                1  2          1  2  3  4  5  6                   1  2  3
+ 3  4  5  6  7  8  9       7  8  9 10 11 12 13       4  5  6  7  8  9 10
+10 11 12 13 14 15 16      14 15 16 17 18 19 20      11 12 13 14 15 16 17
+17 18 19 20 21 22 23      21 22 23 24 25 26 27      18 19 20 21 22 23 24
+24 25 26 27 28 29 30      28 29 30 31               25 26 27 28 29 30
+31
+
+      October                   November                  December
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                   1             1  2  3  4  5                   1  2  3
+ 2  3  4  5  6  7  8       6  7  8  9 10 11 12       4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15      13 14 15 16 17 18 19      11 12 13 14 15 16 17
+16 17 18 19 20 21 22      20 21 22 23 24 25 26      18 19 20 21 22 23 24
+23 24 25 26 27 28 29      27 28 29 30               25 26 27 28 29 30 31
+30 31
+-----------------------------------------------------------------------
+
 # Print the Current Time and Date
 
 import datetime
