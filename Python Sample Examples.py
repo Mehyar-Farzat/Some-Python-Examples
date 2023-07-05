@@ -1,3 +1,4 @@
+
 # Example 1: Add Two Numbers
 
 num1 = 1.5
@@ -290,3 +291,93 @@ while True:
     
 else:
     print('Invalid Number')
+--------------------------------------------------------------------------
+
+even_numbers = []
+odd_numbers = []
+
+for i in range (1 ,101 ):
+    if i % 2 == 0 :
+        even_numbers.append(i)
+        
+    else:
+        odd_numbers.append(i)
+
+even_list = (even_numbers)
+odd_list = (odd_numbers)
+
+print(even_list)
+print(odd_list)
+        
+----------------------------------------------------------    
+
+even_numbers = [i for i in range(1, 101) if i % 2 == 0]
+odd_numbers = [i for i in range(1, 101) if i % 2 != 0]
+
+even_list = (even_numbers)
+odd_list = (odd_numbers)
+
+print("Even numbers:", even_list)
+print("Odd numbers:", odd_list)
+
+---------------------------------------------------------
+
+numbers = range(1, 101)
+even_numbers = []
+odd_numbers = []
+i = 0
+
+while i < len(numbers):
+    if numbers[i] % 2 == 0:
+        even_numbers.append(numbers[i])
+    else:
+        odd_numbers.append(numbers[i])
+    i += 1
+
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+-----------------------------------------------
+
+
+names = ['Ahmed', 'Ali', 'Adam', 'Mustafa']
+length = []
+
+for name in names:
+    length.append(len(name))
+
+print(length)
+
+-------------------------------------------------
+names = ['Ahmed' , 'Ali' , 'Adam' , 'Mustafa']
+length = [len(name) for name in names]
+print(length)
+
+
+-------------------------------------------------
+
+
+names = ['Ahmed', 'Ali', 'Adam', 'Mustafa']
+length = []
+
+i = 0
+while i < len(names):
+    length.append(len(names[i]))
+    i += 1
+
+print(length)
+
+
+
+# Write a program to accept a number from a user
+# and calculate the sum of all numbers from 1 to a given number
+
+num = int(input("Enter a number: "))
+sum = 0
+
+for i in range(1, num + 1):
+    sum += i
+
+print("The sum of all numbers from 1 to", num, "is", sum)
+
+
+
