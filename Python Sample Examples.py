@@ -378,6 +378,99 @@ for i in range(1, num + 1):
     sum += i
 
 print("The sum of all numbers from 1 to", num, "is", sum)
+-----------------------------------------------
+# Given two integer numbers return their product only if the product is
+# equal to or lower than 1000,else return their sum.
+
+def mul_sum(num1 , num2):
+        product = num1 * num2
+        if product <= 1000 :
+                return product
+        else:
+                return num1 + num2
+
+result = mul_sum()
+print(result)
+----------------------------------------------
+# Write a program to iterate the first 10 numbers and in each iteration,
+# print the sum of the current and previous number.
+
+previous = 0
+for i in range(1, 11):
+    current = i
+    total = current + previous
+    print(total)
+    previous = current
+-------------------------------------------------
+# print the area of Triangle
+
+def tri_area(base , height):
+    return (base * height)/2
+
+area = int(tri_area(3 ,2))
+print(f'the area is :{area}')
+-----------------------------------------
+# given age in years and get age in days
+
+def calc_age(age):
+    return age * 365
+
+result = calc_age(30)
+print(result)
+
+--------------------------------------------
+# convet hours to seconds
+
+def how_many_seconds(hours):
+    return hours * 3600
+
+seconds = how_many_seconds(2)
+print(seconds)
+--------------------------------------------
+# convert string to int
+
+def string_to_intiger(string):
+    return int(string)
+
+result = string_to_intiger('1000')
+print(result)
+
+
+-------------------------------------------
+
+# a farmer is asking you to tell him how many legs can be counted
+# among all his animals. The farmer breeds three species:
+# chickens = 2 legs
+# cows = 4 legs
+# pigs = 4 legs
+# The farmer has counted his animals and he gives you a subtotal for
+# each species. You have to implement a function that returns the total number of legs of all the animals.
+
+leg1 = int(input('Enter number of chickens : '))
+leg2 = int(input('Enter number  of cows : '))
+leg3 = int(input('Enter number  of pigs : '))
+
+def animals(chickens, cows, pigs):
+    return chickens * 2 + cows * 4 + pigs * 4
+
+result = animals(2, 3, 5)
+print(result)
+
+----------------------------------------------------
+# get first element and put it in list
+
+def get_first_value(numbers):
+    
+    return [numbers[0]]
+
+
+mylist = [1,2,3]
+result = get_first_value(mylist)
+print (result)
+-----------------------------------------------------
+
+
+
 
 
 
