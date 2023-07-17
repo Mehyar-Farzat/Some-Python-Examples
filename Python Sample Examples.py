@@ -468,6 +468,44 @@ mylist = [1,2,3]
 result = get_first_value(mylist)
 print (result)
 -----------------------------------------------------
+# Dict comprehension
+
+d = {'ahmed' : 20 , 'ali' : 30 , 'hassan' : 40 }
+
+new_d = {k:v+5 for k ,v in d.items()}
+print(new_d)
+
+{'ahmed': 25, 'ali': 35, 'hassan': 45}
+-----------------------------------------------------
+# sum a previous number with a current number
+
+previous = 0
+for i in range(1, 11):
+    current = i
+    total = current + previous
+    print(total)
+    previous = current
+
+def get_first_value(numbers):
+    
+    return [numbers[0]]
+
+
+mylist = [1,2,3]
+result = get_first_value(mylist)
+print (result)
+--------------------------------------
+
+ # sum numbers using map()
+
+def excep_defi(b):
+    a = int(input('Enter the first number: '))
+    return a + b
+
+numbers = list(range(1,5))
+result = map(excep_defi, numbers)
+print(list(result))
+
 
 
 
