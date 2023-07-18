@@ -480,7 +480,7 @@ print(new_d)
 # sum a previous number with a current number
 
 previous = 0
-for i in range(1, 11):
+for i in range(1,11):
     current = i
     total = current + previous
     print(total)
@@ -505,6 +505,109 @@ def excep_defi(b):
 numbers = list(range(1,5))
 result = map(excep_defi, numbers)
 print(list(result))
+
+----------------------------------------
+# Try and except
+try:
+    age = int(input(' Enter your age : '))
+    print(100//age)
+
+except ValueError:
+    print('enter number please')
+
+except ZeroDivisionError:
+    print('enter number > zero')
+
+# we can merge more than one exception in one line:
+
+except (ZeroDivisionError, ValueError):
+    print(' enter number please and > Zero .. ')
+
+# we can make it easilly by using main exception:
+try:
+    age = int(input(' Enter your age : '))
+    print(100//age)
+
+except Exception:
+    print(' please enter number and > zero')
+
+--------------------------------------------
+
+# Fuction Programing ( map ,filter, reduce )
+
+# 1- map function
+
+
+d = {'ahmad' : 30, 'ali' : 40, 'hassan' : 50}
+
+def mydict(x):
+    return x*2
+
+result = map(mydict, d.values())
+print(list(result))
+[60, 80, 100]
+
+
+def mul(n):
+    return n*2
+
+numbers = list(range(1,11))
+
+result = map(mul,numbers)
+print(list(result))
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+---------------------------------------
+
+names = ('ahmad','ali','hassan','adam')
+
+def mylen(n):
+    return len(n)
+
+result = map(mylen,names)
+print(list(result))
+[5, 3, 6, 4]
+
+# using lambda with map
+
+names = ('ahmad','ali','hassan','adam')
+
+result = map(lambda n : len(n), names)
+print(list(result))
+[5, 3, 6, 4]
+---------------------------------------
+
+# 2- filter fuction
+
+def myfilter(n):
+    if n > 5 :
+        return(n)
+numbers = list(range(1,11))
+
+result = filter(myfilter,numbers)
+print(list(result))
+[6, 7, 8, 9, 10]
+
+# or using lambda
+
+numbers = list(range(1,11))
+
+result2 = filter(lambda n : n>5 ,numbers)
+print(list(result2))
+[6, 7, 8, 9, 10]
+-------------------------------------------
+
+# 3- reduce function
+
+from functools import reduce
+
+numbers = list(range(1,11))
+
+def mysum(x,y):
+    return (x + y)
+
+print(reduce(mysum,numbers))
+55
+
 
 
 
