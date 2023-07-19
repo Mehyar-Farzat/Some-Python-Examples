@@ -607,6 +607,39 @@ def mysum(x,y):
 
 print(reduce(mysum,numbers))
 55
+-------------------------------------------
+# Mr. Vincent works in a door mat manufacturing company.
+# One day, he designed a new door mat with the following specifications:
+# Mat size must be N * M. (N is an odd natural number, and M  is  3 times N .)
+# The design should have 'WELCOME' written in the center.
+# The design pattern should only use |, . and - characters.
+
+def door_mat(n, m):
+    for i in range(n):
+        if i == n//2:
+            print("WELCOME".center(m, "-"))
+        elif i < n//2:
+            print((".|."*(i*2+1)).center(m, "-"))
+        else:
+            print((".|."*((n-i-1)*2+1)).center(m, "-"))
+
+door_mat(9, 27)
+--------------------------------------------------
+
+# the user enters a string and a substring. You have to print the number of times that the substring occurs in the given string.
+# String traversal will take place from left to right, not from right to left.
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        if string[i:].startswith(sub_string):
+            count += 1
+    return count
+
+string = "ABCDCDC"
+sub_string = "CDC"
+print(count_substring(string, sub_string))
+---------------------------------------------------
 
 
 
